@@ -1,0 +1,35 @@
+/* ===== STICKY CTA MOBILE ===== */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 30%, var(--bg) 100%);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  animation: slideUp 300ms ease-out;
+  pointer-events: none;
+}
+.sticky-cta[hidden] { display: none; }
+.sticky-cta:not([hidden]) { pointer-events: auto; }
+
+.sticky-cta .btn { width: 100%; max-width: 480px; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Only show on mobile */
+@media (min-width: 769px) {
+  .sticky-cta { display: none !important; }
+}
+
+/* Body padding to prevent content hiding behind sticky CTA */
+@media (max-width: 768px) {
+  body.has-sticky-cta { padding-bottom: 88px; }
+}

@@ -1,0 +1,45 @@
+<!-- ===== AGENDA CON MAPAS Y CALENDARIO ===== -->
+<section class="agenda" aria-labelledby="agenda-title">
+  <div class="container">
+    <header class="section-header">
+      <span class="prompt">></span>
+      <h2 id="agenda-title" class="glitch" data-text="Cronograma completo">Cronograma completo</h2>
+      <p class="section-subtitle">Horarios confirmados. Click en 📍 para abrir en Google Maps · 📅 para añadir a tu calendario.</p>
+    </header>
+
+    <div class="agenda-tabs" role="tablist" aria-label="Días del evento">
+      <button role="tab" aria-selected="true" aria-controls="day-14" id="tab-14" data-day="14-oct" class="tab-btn active">
+        <span class="tab-day">14 OCT</span>
+        <span class="tab-track">Hacking Day</span>
+      </button>
+      <button role="tab" aria-selected="false" aria-controls="day-15" id="tab-15" data-day="15-oct" class="tab-btn">
+        <span class="tab-day">15 OCT</span>
+        <span class="tab-track">Startup Day</span>
+      </button>
+    </div>
+
+    <div role="tabpanel" id="day-14" aria-labelledby="tab-14" class="agenda-panel active">
+      <div class="venue-info" id="venue-14">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span><strong>Sede:</strong> UNICEN Campus Universitario — Pabellón de Exactas</span>
+        <a href="https://maps.google.com/?q=UNICEN+Campus+Universitario+Tandil" target="_blank" rel="noopener" class="venue-map-link" aria-label="Ver UNICEN en Google Maps">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Abrir en Maps
+        </a>
+      </div>
+      <table class="agenda-table"><thead><tr><th scope="col">Hora</th><th scope="col">Track</th><th scope="col">Actividad</th><th scope="col">Speaker</th><th scope="col">Lugar</th><th scope="col" class="actions-col">Acción</th></tr></thead><tbody id="agenda-body-14"></tbody></table>
+    </div>
+
+    <div role="tabpanel" id="day-15" aria-labelledby="tab-15" class="agenda-panel" hidden>
+      <div class="venue-info" id="venue-15">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span><strong>Sede:</strong> Distrito Avellaneda — Auditorio Principal</span>
+        <a href="https://maps.google.com/?q=Distrito+Avellaneda+Tandil" target="_blank" rel="noopener" class="venue-map-link" aria-label="Ver Distrito Avellaneda en Google Maps">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Abrir en Maps
+        </a>
+      </div>
+      <table class="agenda-table"><thead><tr><th scope="col">Hora</th><th scope="col">Track</th><th scope="col">Actividad</th><th scope="col">Speaker</th><th scope="col">Lugar</th><th scope="col" class="actions-col">Acción</th></tr></thead><tbody id="agenda-body-15"></tbody></table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,116 @@
+:root {
+  /* === BASE PALETTE - Terminal Green Harmony === */
+  --bg: #080d08;              /* Deep charcoal green-black */
+  --bg-elevated: #0e160e;     /* Slightly lighter for cards */
+  --bg-card: #121c12;         /* Card backgrounds */
+  --bg-hover: #162216;        /* Hover states */
+
+  --fg: #e8fbe8;              /* Primary text - soft warm green-white */
+  --fg-dim: #a8d4a8;          /* Secondary text */
+  --fg-muted: #7a9e7a;        /* Muted/placeholder text */
+
+  --accent: #00e63a;          /* Primary accent - vibrant but not harsh */
+  --accent-dim: #00cc33;      /* Slightly dimmed */
+  --accent-soft: rgba(0, 230, 58, 0.12);  /* Soft backgrounds */
+  --accent-glow: rgba(0, 230, 58, 0.35);  /* Glow shadows */
+
+  --accent-cyan: #00d4aa;     /* Secondary accent - cyan-green */
+  --accent-cyan-soft: rgba(0, 212, 170, 0.12);
+
+  --warning: #ffb000;         /* Warning/soon */
+  --warning-soft: rgba(255, 176, 0, 0.12);
+
+  --error: #ff4444;           /* Error/closed */
+  --error-soft: rgba(255, 68, 68, 0.12);
+
+  --muted: #2a4a2a;           /* Borders, dividers */
+  --border: #1e3a1e;          /* Default borders */
+  --border-bright: #2a5a2a;   /* Hover borders */
+  --border-focus: #00e63a;    /* Focus rings */
+
+  /* === TYPOGRAPHY === */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+
+  /* Modular scale (ratio 1.25) */
+  --fs-2xs: 0.64rem;   /* 10px */
+  --fs-xs: 0.8rem;     /* 12.8px */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-lg: 1.125rem;   /* 18px */
+  --fs-xl: 1.25rem;    /* 20px */
+  --fs-2xl: 1.5rem;    /* 24px */
+  --fs-3xl: 2rem;      /* 32px */
+  --fs-4xl: 2.5rem;    /* 40px */
+  --fs-5xl: 3.5rem;    /* 56px */
+
+  /* Spacing (4px base) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 1rem;     /* 16px */
+  --space-4: 1.5rem;   /* 24px */
+  --space-5: 2rem;     /* 32px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 6rem;    /* 96px */
+
+  /* Radii */
+  --radius-sm: 3px;
+  --radius: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 100ms ease;
+  --transition: 150ms ease;
+  --transition-slow: 250ms ease;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow: 0 4px 12px rgba(0,0,0,0.45);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.55);
+  --shadow-glow: 0 0 20px var(--accent-glow);
+  --shadow-glow-strong: 0 0 30px var(--accent-glow);
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-h: 64px;
+
+  /* Z-index */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1001;
+  --z-toast: 2000;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #00e63a;
+    --border-bright: #00e63a;
+    --fg-dim: #00e63a;
+    --muted: #00e63a;
+  }
+}
+
+/* Focus visible global */
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection { background: var(--accent-soft); color: var(--bg); }

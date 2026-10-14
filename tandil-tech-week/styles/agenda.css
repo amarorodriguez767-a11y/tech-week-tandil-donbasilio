@@ -1,0 +1,124 @@
+/* ===== AGENDA WITH ACTIONS ===== */
+.agenda-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--fg-dim);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  min-width: 160px;
+}
+.tab-btn:hover, .tab-btn:focus { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.tab-btn.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); box-shadow: var(--shadow-glow); }
+.tab-btn:focus-visible { outline-offset: 2px; }
+
+.tab-day { font-size: var(--fs-lg); font-weight: 700; color: var(--fg); font-family: var(--font-mono); }
+.tab-track { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Panels */
+.agenda-panel { animation: fadeIn 200ms ease; }
+.agenda-panel[hidden] { display: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Venue info bar */
+.venue-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  color: var(--fg-dim);
+}
+.venue-info svg { color: var(--accent); flex-shrink: 0; }
+.venue-info strong { color: var(--fg); }
+.venue-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all var(--transition-fast);
+}
+.venue-map-link:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+/* Table */
+.agenda-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.agenda-table th, .agenda-table td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.agenda-table thead th { color: var(--muted); font-weight: 700; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em; background: var(--bg-card); border-bottom: 2px solid var(--border-bright); }
+.agenda-table tbody tr { transition: background var(--transition-fast); }
+.agenda-table tbody tr:last-child td { border-bottom: none; }
+.agenda-table tbody tr:hover td { background: var(--bg-card); }
+.agenda-table tbody tr:focus-within td { background: var(--accent-soft); outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.agenda-table .time { color: var(--accent); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
+.agenda-table .track { color: var(--fg-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: var(--space-1); padding: 2px var(--space-2); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.agenda-table .title { color: var(--fg); font-weight: 500; }
+.agenda-table .speaker { color: var(--accent); font-weight: 500; }
+.agenda-table .location { color: var(--fg-dim); font-size: var(--fs-xs); display: flex; align-items: center; gap: var(--space-1); }
+.agenda-table .location::before { content: "📍"; font-size: var(--fs-xs); }
+
+/* Actions column */
+.actions-col { width: 120px; text-align: center; }
+.btn-calendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--fg-dim);
+  background: var(--bg-card);
+  transition: all var(--transition-fast);
+}
+.btn-calendar:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); transform: scale(1.05); }
+.btn-calendar:focus-visible { outline-offset: 2px; }
+.btn-calendar svg { width: 18px; height: 18px; }
+
+/* Mobile cards */
+@media (max-width: 900px) {
+  .agenda-table thead { display: none; }
+  .agenda-table, .agenda-table tbody, .agenda-table tr, .agenda-table td { display: block; width: 100%; }
+  .agenda-table tr { padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: var(--space-3); background: var(--bg-elevated); position: relative; }
+  .agenda-table tr::before { content: attr(data-time); position: absolute; top: var(--space-3); right: var(--space-3); color: var(--accent); font-weight: 700; font-size: var(--fs-sm); font-family: var(--font-mono); }
+  .agenda-table td { display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border: none; gap: var(--space-2); }
+  .agenda-table td::before { content: attr(data-label); color: var(--muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; min-width: 80px; flex-shrink: 0; }
+  .agenda-table td:first-child { padding-top: var(--space-3); }
+  .agenda-table .track { font-size: var(--fs-xs); }
+  .agenda-table .actions-col { display: flex; justify-content: center; }
+  .actions-col { width: auto; }
+}
+
+/* Empty state */
+.agenda-panel:empty::after { content: "No hay actividades programadas"; display: block; text-align: center; padding: var(--space-8); color: var(--fg-dim); }
+
+/* Skeleton rows */
+.skeleton-row td { padding: var(--space-3); }
+.skeleton-row .skeleton { height: 20px; border-radius: var(--radius-sm); }

@@ -1,0 +1,83 @@
+/* ===== FAQ / ACCORDION ===== */
+.faq { padding-top: var(--space-6); }
+
+.faq-grid { display: grid; gap: var(--space-3); }
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.faq-item:hover { border-color: var(--border-bright); }
+.faq-item[open] { border-color: var(--accent); box-shadow: var(--shadow-glow); }
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: transparent;
+  border: none;
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.faq-question:hover { color: var(--accent); background: var(--accent-soft); }
+.faq-question:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: var(--radius); }
+
+.faq-category {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--accent-soft);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  margin-right: var(--space-2);
+}
+
+.faq-question .faq-icon {
+  width: 24px; height: 24px;
+  color: var(--accent);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+.faq-item[open] .faq-icon { transform: rotate(180deg); }
+
+.faq-answer {
+  padding: 0 var(--space-4) var(--space-4);
+  color: var(--fg-dim);
+  line-height: 1.7;
+  font-size: var(--fs-sm);
+  animation: faqSlide 250ms ease-out;
+}
+.faq-answer p { margin-bottom: var(--space-2); }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { color: var(--accent); font-weight: 500; }
+.faq-answer a:hover { text-decoration: underline; }
+.faq-answer .tag { display: inline-block; margin-top: var(--space-2); }
+
+@keyframes faqSlide {
+  from { opacity: 0; transform: translateY(-8px); max-height: 0; }
+  to { opacity: 1; transform: translateY(0); max-height: 500px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer { animation: none; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .faq-question { font-size: var(--fs-sm); padding: var(--space-3); }
+  .faq-answer { font-size: var(--fs-xs); padding: 0 var(--space-3) var(--space-3); }
+}

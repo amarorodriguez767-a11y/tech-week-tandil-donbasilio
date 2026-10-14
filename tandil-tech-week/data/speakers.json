@@ -1,0 +1,6 @@
+[
+  { "id": "speaker-1", "name": "María González", "role": "Founder & CEO", "company": "StartupX", "bio": "Ex-Google, 3 exits. Invierte en AI & B2B SaaS.", "photo": "", "social": { "twitter": "https://x.com", "linkedin": "https://linkedin.com" } },
+  { "id": "speaker-2", "name": "Juan Pérez", "role": "Partner", "company": "Picante Fund", "bio": "VC enfocado en AI natives LatAm. Pre-seed a Series A.", "photo": "", "social": { "twitter": "https://x.com", "linkedin": "https://linkedin.com" } },
+  { "id": "speaker-3", "name": "Ana Rodríguez", "role": "Security Researcher", "company": "HackTandil", "bio": "CTF player, bug bounty hunter. Web & Crypto.", "photo": "", "social": { "twitter": "https://x.com", "github": "https://github.com" } },
+  { "id": "speaker-4", "name": "Carlos Méndez", "role": "Tech Lead", "company": "Geonosis", "bio": "Arquitecto de sistemas distribuidos. Rust & Go.", "photo": "", "social": { "linkedin": "https://linkedin.com", "github": "https://github.com" } }
+]

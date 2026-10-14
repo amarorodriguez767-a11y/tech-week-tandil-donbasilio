@@ -1,0 +1,51 @@
+[
+  {
+    "id": "hacking-day",
+    "title": "Hacking Day",
+    "date": "14 Octubre",
+    "location": "UNICEN · Campus Universitario",
+    "track": "Track 01 · Ciberseguridad",
+    "description": "Jornada de hacking en equipos. Juntá a tus amigos y vení a divertirte aprendiendo de ciberseguridad.",
+    "details": [
+      "CTF por equipos (3-5 personas)",
+      "Categorías: Web, Crypto, Forense, Reversing, PWN",
+      "Niveles: Principiante a Avanzado",
+      "Mentores disponibles durante todo el evento",
+      "Premios para top 3 + sorpresas"
+    ],
+    "schedule": [
+      { "time": "09:00", "event": "Acreditación & Bienvenida" },
+      { "time": "10:00", "event": "Kickoff + Reglas del CTF" },
+      { "time": "10:30", "event": "¡Comienza el Hacking!" },
+      { "time": "13:30", "event": "Almuerzo (incluido)" },
+      { "time": "14:30", "event": "Continuación CTF" },
+      { "time": "18:00", "event": "Cierre + Premiación" }
+    ],
+    "cta": "Ver jornada completa"
+  },
+  {
+    "id": "startup-day",
+    "title": "Startup Day",
+    "date": "15 Octubre",
+    "location": "Distrito Avellaneda · Tandil",
+    "track": "Track 02 · Startups",
+    "description": "Vení a conocer a los que hacen. Charlas dinámicas y networking entre fundadores, venture capital y estudiantes.",
+    "details": [
+      "Charlas 20 min: Product, Fundraising, GTM, AI",
+      "Panel VC: qué buscan los inversores en 2026",
+      "Office hours 1:1 con mentores",
+      "Demo spotlights de startups locales",
+      "Afterparty networking"
+    ],
+    "schedule": [
+      { "time": "09:30", "event": "Apertura & Café de bienvenida" },
+      { "time": "10:00", "event": "Keynote: Construyendo en la era AI" },
+      { "time": "11:00", "event": "Charlas track Product / Fundraising" },
+      { "time": "13:00", "event": "Almuerzo networking" },
+      { "time": "14:30", "event": "Panel VC + Office Hours" },
+      { "time": "17:30", "event": "Demo Spotlights" },
+      { "time": "19:00", "event": "Afterparty" }
+    ],
+    "cta": "Ver jornada completa"
+  }
+]

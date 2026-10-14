@@ -1,0 +1,21 @@
+{
+  "14-oct": [
+    { "time": "09:00", "track": "Main", "title": "Acreditación & Bienvenida", "speaker": "Equipo TTW", "location": "Hall Principal" },
+    { "time": "10:00", "track": "Main", "title": "Kickoff CTF + Reglas", "speaker": "HackTandil", "location": "Aula Magna" },
+    { "time": "10:30", "track": "CTF", "title": "¡Comienza el Hacking!", "speaker": "—", "location": "Laboratorios" },
+    { "time": "13:30", "track": "Break", "title": "Almuerzo", "speaker": "—", "location": "Comedor" },
+    { "time": "14:30", "track": "CTF", "title": "Continuación + Hints", "speaker": "Mentores", "location": "Laboratorios" },
+    { "time": "18:00", "track": "Main", "title": "Cierre + Premiación", "speaker": "Organizadores", "location": "Aula Magna" }
+  ],
+  "15-oct": [
+    { "time": "09:30", "track": "Main", "title": "Apertura & Café", "speaker": "Equipo TTW", "location": "Hall" },
+    { "time": "10:00", "track": "Main", "title": "Keynote: Construyendo en la era AI", "speaker": "TBA", "location": "Auditorio" },
+    { "time": "11:00", "track": "Product", "title": "Product Market Fit en 2026", "speaker": "TBA", "location": "Sala A" },
+    { "time": "11:00", "track": "Fundraising", "title": "Levantar capital hoy", "speaker": "TBA", "location": "Sala B" },
+    { "time": "13:00", "track": "Break", "title": "Almuerzo Networking", "speaker": "—", "location": "Patio" },
+    { "time": "14:30", "track": "Main", "title": "Panel VC: Qué buscan los inversores", "speaker": "Picante, TBA", "location": "Auditorio" },
+    { "time": "16:00", "track": "Main", "title": "Office Hours 1:1", "speaker": "Mentores", "location": "Salas varias" },
+    { "time": "17:30", "track": "Main", "title": "Demo Spotlights", "speaker": "Startups locales", "location": "Auditorio" },
+    { "time": "19:00", "track": "Social", "title": "Afterparty", "speaker": "—", "location": "Terraza" }
+  ]
+}

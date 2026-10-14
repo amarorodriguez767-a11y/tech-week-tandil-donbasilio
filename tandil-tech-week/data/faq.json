@@ -1,0 +1,44 @@
+[
+  {
+    "id": "requisitos-hacking",
+    "category": "Hacking Day",
+    "question": "¿Qué requisitos técnicos hay para el Hacking Day?",
+    "answer": "<p><strong>Nivel:</strong> Principiante a avanzado. Hay tracks para todos los niveles.</p><p><strong>Hardware:</strong> Traé tu laptop con batería cargada. Se recomienda Kali Linux, Parrot OS o cualquier distro con herramientas de pentesting, pero no es obligatorio.</p><p><strong>Conocimientos base:</strong> Saber usar terminal, conceptos básicos de red (IP, DNS, HTTP), y curiosidad por aprender.</p><p><strong>Equipos:</strong> De 3 a 5 personas. Si no tenés equipo, te ayudamos a formar uno en la acreditación.</p>"
+  },
+  {
+    "id": "requisitos-startup",
+    "category": "Startup Day",
+    "question": "¿A quién está dirigido el Startup Day?",
+    "answer": "<p><strong>Founders y emprendedores</strong> en etapa temprana (idea, MVP, tracción inicial).</p><p><strong>Inversores</strong> (angels, VCs, CVCs) buscando deal flow en LatAm.</p><p><strong>Estudiantes y profesionales</strong> interesados en product, fundraising, GTM, AI.</p><p><strong>Público general</strong> que quiera entender el ecosistema startup y hacer networking.</p>"
+  },
+  {
+    "id": "costo",
+    "category": "General",
+    "question": "¿Cuánto cuesta la entrada?",
+    "answer": "<p class=\"tag tag-accent\" style=\"font-size: var(--fs-base); padding: var(--space-2) var(--space-4);\">100% Gratuita</p><p>La entrada es <strong>libre y gratuita</strong> para ambas jornadas. Incluye acceso a todas las charlas, talleres, networking, almuerzo (Hacking Day) y coffee breaks.</p><p>Solo requiere <a href=\"#registro\">inscripción previa</a> para control de capacidad y logística.</p>"
+  },
+  {
+    "id": "catering",
+    "category": "Logística",
+    "question": "¿Hay almuerzo y catering?",
+    "answer": "<p><strong>Hacking Day (14 Oct):</strong> Almuerzo incluido para todos los participantes inscriptos. Opciones vegetarianas/veganas disponibles.</p><p><strong>Startup Day (15 Oct):</strong> Coffee breaks mañana y tarde. Almuerzo networking libre (zona de food trucks en Distrito Avellaneda).</p><p><strong>Hidratación:</strong> Agua y bebidas disponibles durante todo el evento en ambas sedes.</p>"
+  },
+  {
+    "id": "acceso",
+    "category": "Logística",
+    "question": "¿Qué documento necesito para entrar?",
+    "answer": "<p><strong>DNI o documento de identidad</strong> obligatorio para acreditarse en ambas sedes (requisito de seguridad de los predios).</p><p><strong>QR de confirmación</strong> (llegará por email tras inscribirse) agiliza el check-in.</p><p><strong>Menores de 18:</strong> Deben venir con autorización firmada por tutor/a (descargable en email de confirmación).</p>"
+  },
+  {
+    "id": "wifi",
+    "category": "Técnico",
+    "question": "¿Hay WiFi y enchufes?",
+    answer: "<p><strong>Hacking Day (UNICEN):</strong> WiFi dedicado de alta capacidad + enchufes en todas las mesas. Red aislada para CTF.</p><p><strong>Startup Day (Distrito Avellaneda):</strong> WiFi corporativo + estaciones de carga distribuidas.</p><p><strong>Recomendación:</strong> Traé tu cargador y, si tenés, power bank.</p>"
+  },
+  {
+    "id": "mapas",
+    "category": "Sedes",
+    "question": "¿Cómo llego a las sedes?",
+    "answer": "<p><strong>Hacking Day — UNICEN (Campus Universitario):</strong> <a href=\"https://maps.google.com/?q=UNICEN+Campus+Universitario+Tandil\" target=\"_blank\" rel=\"noopener\">📍 Ver en Google Maps</a> — Pabellón de Exactas, Aula Magna y Laboratorios.</p><p><strong>Startup Day — Distrito Avellaneda:</strong> <a href=\"https://maps.google.com/?q=Distrito+Avellaneda+Tandil\" target=\"_blank\" rel=\"noopener\">📍 Ver en Google Maps</a> — Entrada principal por Av. Avellaneda.</p><p>Ambas sedes tienen estacionamiento gratuito y acceso en transporte público.</p>"
+  }
+]

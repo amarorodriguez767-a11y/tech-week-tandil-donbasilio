@@ -1,0 +1,44 @@
+/* ===== FOOTER ===== */
+.footer { border-top: 1px solid var(--border); background: var(--bg-elevated); padding: var(--space-10) 0 var(--space-6); position: relative; }
+.footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.3; }
+
+.footer-main { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-8); padding-bottom: var(--space-6); border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: var(--space-4); }
+
+.footer-brand { display: flex; align-items: center; gap: var(--space-2); color: var(--accent); font-size: var(--fs-lg); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-brand .prompt { font-size: var(--fs-sm); opacity: 0.7; }
+
+.footer-social { display: flex; gap: var(--space-3); }
+.footer-social a { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: var(--radius); color: var(--fg-dim); transition: all var(--transition-fast); background: var(--bg-card); }
+.footer-social a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); }
+.footer-social a:focus-visible { outline-offset: 2px; }
+.footer-social svg { width: 22px; height: 22px; }
+
+/* Countdown */
+.footer-countdown { text-align: center; padding: var(--space-6); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: var(--space-6); position: relative; overflow: hidden; }
+.footer-countdown::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, var(--accent-soft) 0%, transparent 70%); pointer-events: none; }
+.countdown-label { font-size: var(--fs-sm); color: var(--fg-dim); margin-bottom: var(--space-4); display: flex; align-items: center; justify-content: center; gap: var(--space-2); }
+.countdown-label .prompt { color: var(--accent); }
+
+.countdown-timer { display: flex; justify-content: center; align-items: center; gap: var(--space-1); flex-wrap: wrap; font-family: var(--font-mono); position: relative; z-index: 1; }
+.countdown-unit { display: flex; flex-direction: column; align-items: center; min-width: 70px; padding: var(--space-2); }
+.countdown-value { font-size: var(--fs-4xl); font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: -0.02em; text-shadow: 0 0 20px var(--glow-strong); }
+.countdown-label-unit { font-size: var(--fs-xs); color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: var(--space-1); }
+.countdown-sep { font-size: var(--fs-4xl); color: var(--muted); line-height: 1; padding: 0 var(--space-1); animation: blink 1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { .countdown-sep { animation: none; opacity: 0.5; } }
+
+.countdown-note { margin-top: var(--space-4); font-size: var(--fs-sm); color: var(--fg-dim); position: relative; z-index: 1; }
+
+/* Footer bottom */
+.footer-bottom { text-align: center; color: var(--fg-dim); font-size: var(--fs-sm); padding-top: var(--space-4); border-top: 1px solid var(--border); }
+.footer-bottom p + p { margin-top: var(--space-1); }
+.footer-bottom .heart { color: var(--accent); animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+@media (prefers-reduced-motion: reduce) { .footer-bottom .heart { animation: none; } }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-main { flex-direction: column; text-align: center; }
+  .countdown-value { font-size: var(--fs-3xl); }
+  .countdown-sep { font-size: var(--fs-3xl); }
+  .countdown-unit { min-width: 60px; }
+}

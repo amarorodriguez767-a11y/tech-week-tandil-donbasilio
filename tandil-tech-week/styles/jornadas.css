@@ -1,0 +1,131 @@
+/* ===== JORNADAS COMPARATIVAS ===== */
+.jornadas { padding-bottom: var(--space-8); }
+
+.jornadas-compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.jornada-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-5);
+  background: var(--bg-elevated);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  cursor: default;
+}
+.jornada-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-strong);
+  transform: translateY(-4px);
+}
+.jornada-card:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Status ribbon */
+.jornada-status {
+  position: absolute;
+  top: -12px;
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 1px solid;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+.jornada-status.live { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.jornada-status.soon { background: rgba(255, 176, 0, 0.15); color: var(--warning); border-color: var(--warning); }
+.jornada-status.closed { background: var(--error-bg); color: var(--error); border-color: var(--error); }
+.jornada-status.ended { background: var(--bg-card); color: var(--fg-muted); border-color: var(--border); }
+
+/* Track identifier */
+.jornada-track-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  margin-bottom: var(--space-3);
+}
+.jornada-card:nth-child(2) .jornada-track-badge { background: rgba(0, 212, 170, 0.15); color: #00d4aa; }
+
+/* Title & Date */
+.jornada-title { font-size: var(--fs-2xl); color: var(--fg); margin-bottom: var(--space-1); line-height: 1.2; }
+.jornada-date { font-size: var(--fs-lg); font-weight: 700; color: var(--accent); margin-bottom: var(--space-3); }
+
+/* Description */
+.jornada-desc { color: var(--fg-dim); font-size: var(--fs-sm); line-height: 1.7; margin-bottom: var(--space-4); flex: 1; }
+
+/* Target audience */
+.jornada-audience {
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.audience-label { font-size: var(--fs-xs); font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2); display: flex; align-items: center; gap: var(--space-1); }
+.audience-label::before { content: "🎯"; font-size: var(--fs-sm); }
+.audience-list { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.audience-tag {
+  font-size: var(--fs-xs);
+  padding: 4px var(--space-2);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  color: var(--fg-dim);
+  transition: all var(--transition-fast);
+}
+.audience-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Venue info */
+.jornada-venue {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding: var(--space-3);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  color: var(--fg-dim);
+}
+.jornada-venue svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
+.jornada-venue strong { color: var(--fg); }
+.jornada-venue .venue-map { margin-left: auto; color: var(--accent); font-weight: 600; font-size: var(--fs-xs); text-decoration: underline; text-underline-offset: 2px; }
+.jornada-venue .venue-map:hover { color: var(--fg); }
+
+/* Actions */
+.jornada-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--border); }
+.jornada-actions .btn { flex: 1; min-width: 140px; }
+.jornada-actions .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* CTA fallback */
+.jornadas-cta { margin-top: var(--space-6); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jornadas-compare { grid-template-columns: 1fr; }
+  .jornada-card { padding: var(--space-4); }
+}
